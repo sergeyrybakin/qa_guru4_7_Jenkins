@@ -40,3 +40,10 @@ task positive_tests(type: Test){
         includeTags ('positive')
     }
 }
+
+task predprod_tests(type: Test){
+    useJUnitPlatform{
+        includeTags ('positive')
+        excludeTags ('prod')
+    }
+}
