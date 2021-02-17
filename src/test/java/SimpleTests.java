@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -14,6 +15,7 @@ public class SimpleTests {
     void negativeTest() {
         assertEquals(true, false);
     }
+
     @Test
     void successHamcrestTest() {
         assertThat(true, is(true));
@@ -21,6 +23,18 @@ public class SimpleTests {
 
     @Test
     void negativeHamcrestTest() {
+        assertThat(true, is(false));
+    }
+
+    @Test
+    @DisplayName("Positive test")
+    void successHamcrestAndAllureTest() {
+        assertThat(true, is(true));
+    }
+
+    @Test
+    @DisplayName("Negative test")
+    void negativeHamcrestAndAllureTest() {
         assertThat(true, is(false));
     }
 
