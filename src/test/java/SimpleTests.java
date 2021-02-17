@@ -9,7 +9,7 @@ import static org.hamcrest.Matchers.is;
 
 public class SimpleTests {
     @Test
-    @Tag("Positive")
+    @Tag("positive")
     void successTest() {
         assertEquals(true, true);
     }
@@ -20,7 +20,7 @@ public class SimpleTests {
     }
 
     @Test
-    @Tag("Positive")
+    @Tag("positive")
     void successHamcrestTest() {
         assertThat(true, is(true));
     }
@@ -31,7 +31,7 @@ public class SimpleTests {
     }
 
     @Test
-    @Tag("Positive")
+    @Tag("positive")
     @DisplayName("Positive test")
     void successHamcrestAndAllureTest() {
         step("Assert that true is true", () ->
