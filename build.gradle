@@ -34,3 +34,9 @@ tasks.withType(JavaCompile) {
 test {
     useJUnitPlatform()
 }
+
+task positive_tests(type: Test){
+    useJUnitPlatform{
+        includeTags ('Positive')
+    }
+}
